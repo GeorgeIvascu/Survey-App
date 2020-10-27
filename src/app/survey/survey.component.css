@@ -1,0 +1,28 @@
+/* mat-select{
+    border:2px solid blue;
+} */
+
+.survey{
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    padding-left:50px;
+}
+
+ul{
+    list-style: none;
+}
+
+.col-12{
+    margin-top:20px;
+}
+
+.q{
+    margin-top: 30px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}

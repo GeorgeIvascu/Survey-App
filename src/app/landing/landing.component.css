@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.left {
+    display:flex;
+    flex-direction: column;
+}
+
+.check {
+    font-size:12px;
+    margin-top:30px;
+    padding-left:10px;
+}
+
+
+
+mat-list{
+    margin-bottom:30px;
+}
+
+.ic{
+    padding-right:10px;
+}

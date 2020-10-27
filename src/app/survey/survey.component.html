@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="survey">
+        <h1>{{survey.title}}</h1>
+        <div class="description" *ngIf="!start">
+            <h4>Description:</h4>
+            <p>{{survey.description}}</p>
+            <button mat-raised-button color="primary" (click)="startSurvey()">Start</button>
+        </div>
+
+        <div *ngIf="start" class="form-control">
+            <div *ngFor="let item of answers">
+                <div class="q">
+                    {{item.id}}. {{item.q}}
+                </div>
+                <!-- <ul>
+                    <li *ngFor="let i of item.a">
+                        <input type="radio" [attr.name]="i" [value]="i">{{i}}
+                    </li>
+                </ul> -->
+
+                <mat-select class="col-12" name="i" id="i" placeholder="Select an answer">
+                    <mat-option *ngFor="let i of item.a" [value]="i">{{i}}</mat-option>
+                </mat-select>
+            </div>
+
+            
+            <div class="btns">
+                <button mat-raised-button color="danger">Cancel</button>
+                <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div>

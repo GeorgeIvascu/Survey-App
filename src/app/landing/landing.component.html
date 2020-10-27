@@ -1,0 +1,28 @@
+<!-- <button mat-raised-button color="primary">Primary</button> -->
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h1>Quick Surveys</h1>
+      <p>Take part in 5 minute surveys and help somebody out.</p>
+    </div>
+    <div class="cuprins">
+      <mat-divider></mat-divider>
+      <p>How it works:</p>
+      
+          <mat-list>
+            <mat-list-item *ngFor="let item of rules"><mat-icon class="ic">check</mat-icon>{{item}}</mat-list-item>
+          </mat-list>
+          <mat-divider></mat-divider>
+       
+        <!-- <mat-checkbox class="check" [color]='primary'>I understand the conditions.</mat-checkbox> -->
+        <input type="checkbox" [checked]="agree" (change)="agree = !agree"/><span class="check">I understand the rules.</span> 
+    </div>
+  </div>
+  <div class="right">
+    <h3>Available Surveys</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let item of surveys"><button mat-raised-button color="primary" [disabled]="!agree" (click)="openSurvey(item)">{{item.title}}</button></mat-list-item>
+    </mat-list>
+  </div>
+
+</div>
