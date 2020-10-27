@@ -18,8 +18,6 @@ export class SurveyComponent implements OnInit {
 
   ngOnInit() {
     this.data.currentObj.subscribe(obj => this.survey = obj)
-    //console.log(this.survey + "de la ala");
-    //this.answers = this.survey.q.a.split(" ");
 
     this.answers = this.survey.q.map(obj => {
       var ans = {id:0, q:'', a:[]}

@@ -10,8 +10,7 @@ import { DataShareService } from '../data-share.service';
 })
 export class LandingComponent implements OnInit {
 
-  titles = ['Test Survey', 'Earth and Rotation Survey', 'Microservices Survey', 'Cats Adoption Survey'];
-
+  // hardcoded data
   surveys = [
     {title:'Test Survey', description: 'This survey is just for testing. Good luck!', 
     q:[{id:1, qq:'Select just one', a:'Yes No'}, {id:2, qq:'How you doin?', a:'Great Meh'}, {id:3, qq:'How long since?', a:'Alot 1Year 2Years'}, {id:4, qq:'Are you still looking?', a:'Yes No Confidential'}]},
